@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <style type="text/css">
+          h2 {font-size:18pt;
+          color:#e8b002;
+          font-family: verdana} 
+          h3 {
+              font-size: 12pt;
+              font-weight: bold;
+              color:#fb503e;
+              background-color: black;
+              font-family: verdana
+          }
+         
+        </style>
+    </head>
+    <body bgcolor="#abc241">
+        <script>
+       var acme=new Object();
+       acme.management = "Management coordinates everthing";
+         acme.management =new Object();
+           acme.management.rand ="Research and Development works to develop new and better product and service."
+           acme.finance="Finance keeps track of the money";
+           acme.production="Production make the stuff";
+           acme.marketing="Marketing develops strategies to target to the product";
+           acme.marketing= new Object();
+            acme.marketing.sales="Sales contact potential clients and sell the product";
+             acme.fulfillment="Fulfillment delivers sold product";
+             var display="<h2> First the properties of the acme object</h2>";
+             for(var counter in acme){
+                 display+=counter+"<br>";
+             }
+             display+="<h3>And now the values of the properties of managment and marketing</h3>";
+             display+=acme.management.rand+"<br>";
+             display+=acme.marketing.sales;
+             document.write(display);
+        </script>
+    </body>
+</html>
