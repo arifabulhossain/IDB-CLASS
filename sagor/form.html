@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form with validation</title>
+<script>
+///////////////////////////FOr name////////////////
+function validateForm(){
+var myid = document.fname.myid.value;
+var fname = document.fname.fnamex.value;
+var gender = document.fname.gender.value;
+var email = document.fname.email.value;
+var round = document.fname.round.value;
+
+//////////////////////FOr validation/////
+var win;
+if(myid == ""){
+	document.getElementById("myid").innerHTML =  "Please Enter your id!"
+	return false;
+	}
+else if(myid.length<6){
+		document.getElementById("myid").innerHTML =  "Id should be atleast 6 characters!"
+	return false;
+
+	}
+else{
+		document.getElementById("myid").innerHTML =  ""
+
+
+	}
+
+if(fname == ""){
+		document.getElementById("fnamex").innerHTML =  "Please Enter your Name!"
+	return false;
+
+	}
+else if(fname.length<3){
+		document.getElementById("fnamex").innerHTML =  "Name should be atleast 3 character!"
+	return false;
+
+	}
+else{
+		document.getElementById("fnamex").innerHTML =  "";
+
+
+	}
+
+if(email == ""){
+		document.getElementById("email").innerHTML =  "Please Enter your email!";
+	return false;
+
+	}
+else{
+		document.getElementById("email").innerHTML =  "";
+	
+
+	}
+
+if(gender == ""){
+		document.getElementById("gender").innerHTML =  "Please Enter your gender!"
+	return false;
+
+	}
+else{
+		document.getElementById("gender").innerHTML =  ""
+	
+
+	}
+
+if(round == "select a round"){
+		document.getElementById("round").innerHTML =  "Please Enter your round!"
+	return false;
+
+	}
+
+else{
+		document.getElementById("round").innerHTML =  ""
+	
+	win = window.open("","","width = 400");
+	win.document.write(myid);
+	win.document.write(fname);
+	win.document.write(email);
+	win.document.write(gender);
+	win.document.write(round);
+	}
+
+
+
+}
+</script>
+
+
+</head>
+
+<body>
+<form name="fname">
+Id: <input type="number" name="myid"> <label id="myid"></label> <br>
+Name: <input type="name" name="fnamex"> <label id="fnamex"></label> <br>
+
+Email:<input type="email" name="email"> <label id="email"></label> <br>
+Gender:<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female 
+<label id="gender"></label> <br>
+
+Round:
+<select name="round">
+<option value="select a round">Select A ROund</option>
+<option value="Round 36">Round 36</option>
+<option value="Round 37">Round 37</option>
+<option value="Round 38">Round 38</option>
+<option value="Round 39">Round 39</option>
+
+</select>
+<label id="round"></label> <br>
+<input type="reset" value="Reset">
+
+</form>
+<button onClick="validateForm()">Display</button>
+
+</body>
+</html>
